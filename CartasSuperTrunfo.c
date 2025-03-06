@@ -1,6 +1,21 @@
 #include <stdio.h>
+#include <ctype.h>
+#include <string.h>
 
-int main() {
+// function to calc the population desnsity
+float calcPopulationDensity(int population, float area)
+{
+    return population / area;
+};
+
+// functoin to calc PIB per capita
+float calcPIBperCapita(float pib, int população)
+{
+    return pib / população;
+};
+
+int main()
+{
     // Card 1 Variables
     char state1;
     char cardCode1[3];
@@ -9,8 +24,9 @@ int main() {
     float areaInsqkm1;
     float pib1;
     int touristSitesNumber1;
-    
-    //card 2 Variables
+    float populationDensity1;
+
+    // card 2 Variables
     char state2;
     char cardCode2[3];
     char city2[27];
@@ -18,8 +34,9 @@ int main() {
     float areaInsqkm2;
     float pib2;
     int touristSitesNumber2;
-    
-    // Colet card 1 infos
+    float populationDensity2;
+
+    // Colect card 1 infos
     printf("• Carta 1 • \n\n");
 
     printf("• Insira o caractere de estado de A a H:\n");
@@ -27,9 +44,11 @@ int main() {
 
     printf("• Insira o código da carta de 01 a 04:\n");
     scanf(" %2s", cardCode1);
+    getchar();
 
     printf("• Qual o nome da cidade?\n");
-    scanf(" %s", city1);
+    fgets(city1, 27, stdin);
+    city1[strcspn(city1, "\n")] = 0;
 
     printf("• Qual é a população da cidade? (Ex: 1234567):\n");
     scanf(" %d", &population1);
@@ -51,9 +70,11 @@ int main() {
 
     printf("• Insira o código da carta de 01 a 04:\n");
     scanf(" %2s", cardCode2);
+    getchar();
 
     printf("• Qual o nome da cidade?\n");
-    scanf(" %s", city2);
+    fgets(city2, 27, stdin);
+    city2[strcspn(city2, "\n")] = 0;
 
     printf("• Qual é a população da cidade? (Ex: 1234567):\n");
     scanf(" %d", &population2);
@@ -79,6 +100,8 @@ int main() {
     printf("População: %d\n", population1);
     printf("Área: %.2f Km²\n", areaInsqkm1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
+    printf("Densidade Populacional: %.2f\n", calcPopulationDensity(population1, areaInsqkm1));
+    printf("PIB per Capita: %.2f\n", calcPIBperCapita(pib1, population1));
     printf("Número de pontos turísticos: %d\n", touristSitesNumber1);
 
     printf("\n\n");
@@ -92,6 +115,8 @@ int main() {
     printf("População: %d\n", population2);
     printf("Área: %.2f Km²\n", areaInsqkm2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
+    printf("Densidade populacional: %.2f\n", calcPopulationDensity(population2, areaInsqkm2));
+    printf("PIB per Capita: %.2f\n", calcPIBperCapita(pib2, population2));
     printf("Número de pontos turísticos: %d\n", touristSitesNumber2);
 
     return 0;
