@@ -3,29 +3,24 @@
 #include <string.h>
 
 // function to calc the population desnsity
-float calcPopulationDensity(int population, float area)
-{
+float calcPopulationDensity(int population, float area) {
 	return population / area;
 };
 
 // functoin to calc PIB per capita
-float calcPIBperCapita(float pib, int população)
-{
+float calcPIBperCapita(float pib, int população) {
 	return pib / população;
 };
 
-float densityInverter(float populationDensity)
-{
+float densityInverter(float populationDensity) {
 	return 1 / populationDensity;
 };
 
-float calcSuperPower(int population, float areaInsqkm, float pib, int touristSitesNumber, float pibPerCapita, float invertedDensity)
-{
+float calcSuperPower(int population, float areaInsqkm, float pib, int touristSitesNumber, float pibPerCapita, float invertedDensity) {
 	return population + areaInsqkm + pib + touristSitesNumber + pibPerCapita + invertedDensity;
 };
 
-int main()
-{
+int main() {
 	// Card 1 Variables
 	char state1;
 	char cardCode1[3];
@@ -82,7 +77,8 @@ int main()
 
 	// Calculations from card 1
 	populationDensity1 = calcPopulationDensity(population1, areaInsqkm1);
-	pibPerCapita1 = calcPopulationDensity(pib1, population1);
+	pibPerCapita1 = calcPIBperCapita(pib1, population1);
+	invertedDensity1 = densityInverter(populationDensity1);
 	superPower1 = calcSuperPower(population1, areaInsqkm1, pib1, touristSitesNumber1, pibPerCapita1, invertedDensity1);
 
 	// Colect card 2 infos
@@ -113,7 +109,8 @@ int main()
 
 	// Calculations from card 2
 	populationDensity2 = calcPopulationDensity(population2, areaInsqkm2);
-	pibPerCapita2 = calcPopulationDensity(pib2, population2);
+	pibPerCapita2 = calcPIBperCapita(pib2, population2);
+	invertedDensity2 = densityInverter(populationDensity2);
 	superPower2 = calcSuperPower(population2, areaInsqkm2, pib2, touristSitesNumber2, pibPerCapita2, invertedDensity2);
 
 	// List cards
