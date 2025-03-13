@@ -121,38 +121,9 @@ int main() {
 	printf("Área: Carta %s venceu! (%s)\n", (areaInsqkm1 > areaInsqkm2) ? "1" : "2", (areaInsqkm1 > areaInsqkm2) ? "1" : "0");
 	printf("PIB: Carta %s venceu! (%s)\n", (pib1 > pib2) ? "1" : "2", (pib1 > pib2) ? "1" : "0");
 	printf("Pontos Turísticos: Carta %s venceu! (%s)\n", (touristSitesNumber1 > touristSitesNumber2) ? "1" : "2", (touristSitesNumber1 > touristSitesNumber2) ? "1" : "0");
-	printf("Densidade Populacional: Carta %s venceu! (%s)\n", (populationDensity1 > populationDensity2) ? "1" : "2", (populationDensity1 > populationDensity2) ? "1" : "0");
+	printf("Densidade Populacional: Carta %s venceu! (%s)\n", (populationDensity1 < populationDensity2) ? "1" : "2", (populationDensity1 < populationDensity2) ? "1" : "0");
 	printf("PIB per Capita: Carta %s venceu! (%s)\n", (pibPerCapita1 > pibPerCapita2) ? "1" : "2", (pibPerCapita1 > pibPerCapita2) ? "1" : "0");
 	printf("Super Poder: Carta %s venceu! (%s)\n", (superPower1 > superPower2) ? "1" : "2", (superPower1 > superPower2) ? "1" : "0");
 
-	// Print Card 1
-	/*
-	printf("• Carta 1 • \n\n");
-	printf("Estado: %c\n", state1);
-	printf("Carta: %s\n", cardCode1);
-	printf("Código: %c%s\n", state1, cardCode1);
-	printf("Cidade: %s\n", city1);
-	printf("População: %lu\n", population1);
-	printf("Área: %.2f Km²\n", areaInsqkm1);
-	printf("PIB: %.2f bilhões de reais\n", pib1);
-	printf("Densidade Populacional: %.2f\n", populationDensity1);
-	printf("PIB per Capita: %.2f\n", pibPerCapita1);
-	printf("Número de pontos turísticos: %d\n", touristSitesNumber1);
-	*/
-
-	// Print Card 2
-	/*
-	printf("• Carta 2 • \n\n");
-	printf("Estado: %c\n", state2);
-	printf("Carta: %s\n", cardCode2);
-	printf("Código: %c%s\n", state2, cardCode2);
-	printf("Cidade: %s\n", city2);
-	printf("População: %lu\n", population2);
-	printf("Área: %.2f Km²\n", areaInsqkm2);
-	printf("PIB: %.2f bilhões de reais\n", pib2);
-	printf("Densidade populacional: %.2f\n", populationDensity2);
-	printf("PIB per Capita: %.2f\n", pibPerCapita2);
-	printf("Número de pontos turísticos: %d\n", touristSitesNumber2);
-	*/
 	return 0;
 }
