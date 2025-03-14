@@ -1,3 +1,16 @@
+# Executando
+Como compilar e executar o código:
+
+No terminal, dentro da pasta do projeto, execute o comando abaixo para compilar e executar o arquivo `tema1-cartasSuperTrunfo.c`:
+```bash
+gcc tema1-cartasSuperTrunfo.c -o tema1-cartasSuperTrunfo && ./ tema1-cartasSuperTrunfo
+```
+
+para o segundo arquivo `tema2-cartasSuperTrunfo.c`, execute:
+```bash
+gcc tema2-cartasSuperTrunfo.c -o tema2-cartasSuperTrunfo && ./ tema2-cartasSuperTrunfo
+```
+
 # Desafio Super Trunfo - Países - Cadastro das Cartas - Atualizado: 21/02
 
 Bem-vindo ao desafio "Super Trunfo - Países"! No jogo Super Trunfo, os jogadores comparam os atributos das cartas para determinar a mais forte. O tema deste Super Trunfo é "Países", onde você comparará os atributos das cidades.
